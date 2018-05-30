@@ -23,7 +23,7 @@ func main() {
 		o, err := exec.Command("sh", "-c", c).Output()
 		if err != nil {
 			fmt.Println("err : " + err.Error())
-			break // 終わる
+			os.Exit(1)
 		} else {
 			fmt.Println(string(o))
 		}
